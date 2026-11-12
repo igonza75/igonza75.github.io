@@ -1,6 +1,6 @@
 const clientId = '914504e648074046b05f5f459effce00';
 const playlistUri = 'spotify:playlist:2SILhjFALQvICSzZbTz5py';
-const redirectUri = 'https://igonza75.github.io/CIS300-WebDesign/';
+const redirectUri = 'https://igonza75.github.io/';
 
 const scopes = 'streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state';
 
