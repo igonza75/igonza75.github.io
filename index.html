@@ -1,107 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sounds off the Shelf: a personal space for records, music recommendations, and physical music.">
+    <meta name="description" content="Sounds off the Shelf: records, recommendations, and physical music.">
     <title>Sounds off the Shelf | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <header class="site-header">
         <h1>Sounds off the Shelf</h1>
         <p>A little corner of the internet for music lovers.</p>
     </header>
-
     <main class="desktop">
-
         <section class="window" aria-labelledby="window-title">
-
             <div class="title-bar">
                 <span id="window-title">Sounds off the Shelf — Music Player</span>
                 <a class="close-button" href="index.html" aria-label="Return to homepage">×</a>
             </div>
-
             <div class="window-content">
-
                 <div class="player-screen">
-
-                    <div class="album-art" aria-label="Placeholder album artwork">
-                        ♪
-                    </div>
-
+                    <div class="album-art" id="album-art" aria-label="Album artwork">♪</div>
                     <div class="track-info">
-
                         <span class="eyebrow">NOW PLAYING</span>
-
-                        <h2>Your favorite track</h2>
-
-                        <p>Artist Name · Album Name</p>
-
-                        <div class="progress-track">
-                            <span></span>
+                        <h2 id="track-title">Connect Spotify</h2>
+                        <p id="track-details">Your gatekeep playlist</p>
+                        <div class="progress-track" role="progressbar" aria-label="Playback progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
+                        <div class="time-labels"><span id="elapsed">0:00</span><span id="duration">0:00</span></div>
+                        <div class="playback" aria-label="Music controls">
+                            <button id="previous" type="button" aria-label="Previous track" disabled>◀◀</button>
+                            <button id="play-pause" type="button" aria-label="Play or pause" disabled>▶</button>
+                            <button id="next" type="button" aria-label="Next track" disabled>▶▶</button>
                         </div>
-
-                        <div class="time-labels">
-                            <span>0:42</span>
-                            <span>3:30</span>
-                        </div>
-
-                        <div class="playback" aria-label="Decorative music controls">
-                            ◀◀ &nbsp; ▶ &nbsp; ▶▶
-                        </div>
-
+                        <button id="spotify-login" class="spotify-login" type="button">Connect Spotify Premium</button>
+                        <p class="spotify-message" id="spotify-message" role="status">Sign in to play this playlist in your browser.</p>
                     </div>
-
                 </div>
-
-                <p class="intro">
-                    Welcome to my music shelf! Explore some of the records I collect,
-                    albums I recommend, and why physical music means so much to me.
-                </p>
-
+                <p class="intro">Welcome to my music shelf! Explore some of the records I collect, albums I recommend, and why physical music means so much to me.</p>
                 <nav class="window-nav" aria-label="Main navigation">
-
-                    <a href="collection.html">
-                        <span>▣</span>
-                        <span>Record Collection</span>
-                    </a>
-
-                    <a href="artists.html">
-                        <span>★</span>
-                        <span>Recommended Artists</span>
-                    </a>
-
-                    <a href="albums.html">
-                        <span>♫</span>
-                        <span>Recommended Albums</span>
-                    </a>
-
-                    <a href="physical.html">
-                        <span>♪</span>
-                        <span>Why Physical Music?</span>
-                    </a>
-
+                    <a href="collection.html">▣ <span>Record Collection</span></a>
+                    <a href="artists.html">★ <span>Recommended Artists</span></a>
+                    <a href="albums.html">♫ <span>Recommended Albums</span></a>
+                    <a href="physical.html">♪ <span>Why Physical Music?</span></a>
                 </nav>
-
             </div>
-
-            <div class="status-bar">
-                Ready · Pick a section to explore
-            </div>
-
+            <div class="status-bar">Ready · Pick a section to explore</div>
         </section>
-
     </main>
-
-    <footer class="site-footer">
-        <p>Home | About | Contact | Copyright 2026</p>
-    </footer>
-
+    <footer class="site-footer"><p>© 2026 Sounds off the Shelf · Made for CIS 300</p></footer>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="spotify.js" defer></script>
 </body>
-
 </html>
